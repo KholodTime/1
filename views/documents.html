@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Документы</title>
+</head>
+<body>
+  <header>
+    <button class="title-button" onclick="location.href='/'">Главная страница</button>
+    <div class="top-buttons">
+      <button onclick="location.href='/documents'">Документы</button>
+      <button onclick="location.href='/contacts'">Контакты</button>
+      <button onclick="location.href='/chat'">Чат</button>
+      <button onclick="location.href='/dashboard'">Личный кабинет</button>
+      <button onclick="location.href='/logout'">Выйти</button>
+    </div>
+  </header>
+  <main>
+    <h1>Документы</h1>
+    <form action="/upload-document" method="POST" enctype="multipart/form-data">
+      <label for="document">Загрузить документ:</label>
+      <input type="file" id="document" name="document">
+      <button type="submit">Загрузить</button>
+    </form>
+    <div id="document-list">
+      <!-- Список документов будет загружен здесь -->
+    </div>
+  </main>
+  <script src="/js/script.js"></script>
+</body>
+</html>

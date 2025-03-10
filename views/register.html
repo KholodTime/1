@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Регистрация</title>
+</head>
+<body>
+  <header>
+    <button class="title-button" onclick="location.href='/'">Главная страница</button>
+    <div class="top-buttons">
+      <button onclick="location.href='/documents'">Документы</button>
+      <button onclick="location.href='/contacts'">Контакты</button>
+      <button onclick="location.href='/chat'">Чат</button>
+      <button onclick="location.href='/dashboard'">Личный кабинет</button>
+    </div>
+  </header>
+  <main>
+    <h1>Регистрация</h1>
+    <form action="/register" method="POST">
+      <label for="email">Электронная почта:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name">
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </main>
+  <script src="/js/script.js"></script>
+</body>
+</html>

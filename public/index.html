@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Smart Office</title>
+</head>
+<body>
+  <header>
+    <button class="title-button" onclick="location.href='/'">Главная страница</button>
+    <div class="auth-buttons">
+      <button onclick="openLoginModal()">Вход</button>
+      <button onclick="openRegisterModal()">Регистрация</button>
+    </div>
+  </header>
+  <main>
+    <h1>Добро пожаловать в Smart Office</h1>
+    <p>Умный офис для удобной работы и общения.</p>
+  </main>
+
+  <!-- Модальное окно входа -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Вход</h2>
+      <form action="/login" method="POST">
+        <label for="email-login">Электронная почта:</label>
+        <input type="email" id="email-login" name="email" required>
+        <label for="password-login">Пароль:</label>
+        <input type="password" id="password-login" name="password" required>
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно регистрации -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegisterModal()">&times;</span>
+      <h2>Регистрация</h2>
+      <form action="/register" method="POST">
+        <label for="email-register">Электронная почта:</label>
+        <input type="email" id="email-register" name="email" required>
+        <label for="password-register">Пароль:</label>
+        <input type="password" id="password-register" name="password" required>
+        <label for="name-register">Имя:</label>
+        <input type="text" id="name-register" name="name">
+        <label for="phone-register">Телефон:</label>
+        <input type="text" id="phone-register" name="phone">
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
